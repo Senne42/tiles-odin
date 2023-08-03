@@ -20,8 +20,24 @@ body {
     
 }
 
+.sliderContainer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
 #tiles {
+    width: 500px;
+    height: 500px;
     border: green solid 3px;
-    width: 480px;
-    height: 480px;
+    display: grid;
+    /* THIS WILL BE DEFINED IN JS grid-template-columns: repeat(2, 1fr); */
+    grid-gap: 0px;
+}
+
+.tileTeste {
+    background-color: aqua;
+    border: red solid 1px;
+    padding: 20px;
+    text-align: center;
 }
