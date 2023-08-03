@@ -7,19 +7,31 @@ document.addEventListener("DOMContentLoaded", function(){
         const selectedValue = slider.value;
         sliderNumber.innerText = `${selectedValue} x ${selectedValue}`
         tiles.style.gridTemplateColumns = (`repeat(${selectedValue}, ${selectedValue}fr)`)
-
+        fillGrid(selectedValue)
     })
+    cleanGrid()
+    fillGrid(slider.value)
+
 })
 
-
-
-
-function fillGrid (size) {
-    let box = ""
-    for (let a=0; a <= size; a++) {
-
+function cleanGrid () {
+    while (tiles.firstChild) {
+        tiles.removeChild(tiles.firstChild)
     }
 }
+
+function fillGrid (size) {
+    size = size * size
+    cleanGrid()
+    for (let a=1; a <= size; a++) {       
+        const box = document.createElement('div');
+        box.setAttribute('class', 'tileTeste')
+        tiles.appendChild(box)
+    }
+}
+
+
+
 
 /*
 Criar a caixa

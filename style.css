@@ -36,8 +36,11 @@ body {
 }
 
 .tileTeste {
-    background-color: aqua;
-    border: red solid 1px;
-    padding: 20px;
+    /* border: red solid 1px; */
     text-align: center;
+    transition:ease-in-out;
+}
+
+.tileTeste:hover {
+    background-color: blue;
 }
