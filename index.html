@@ -13,12 +13,15 @@
         <p>Move the mouse trough the tiles and witness the magic!</p>
     </header>
     <div id="content">
+        <div class="colorSelector">
+            <p>Pick the color of your brush.</p>
+            <input type="color" name="brushColor" id="brushColor">
+        </div>
         <div class="sliderContainer">
             <label>Grid Size</label>
             <input type="range" min="1" max="64" value="16" class="slider" id="gridSize">
             <p id="sliderNumber">16 x 16</p>
         </div>
-        
         <div id="tiles">
         </div>
     </div>

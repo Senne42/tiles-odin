@@ -20,10 +20,19 @@ body {
     
 }
 
-.sliderContainer {
+.sliderContainer, .colorSelector {
     display: flex;
     flex-direction: column;
     text-align: center;
+}
+
+.colorSelector {
+    align-items: center;
+    margin: 12px 0;
+}
+
+.colorSelector input {
+    width: 100%;
 }
 
 #tiles {
@@ -36,11 +45,6 @@ body {
 }
 
 .tileTeste {
-    /* border: red solid 1px; */
     text-align: center;
     transition:ease-in-out;
-}
-
-.tileTeste:hover {
-    background-color: blue;
 }
