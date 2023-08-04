@@ -15,15 +15,23 @@ p, h1 {
 body {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
-    
+    background: rgb(138,192,219);
+    background: radial-gradient(circle, rgba(138,192,219,1) 16%, rgba(242,221,241,1) 62%); 
 }
 
 .sliderContainer, .colorSelector {
     display: flex;
     flex-direction: column;
     text-align: center;
+    font-size: large;
+    /* margin: 10px; */
+    padding: 10px;
+}
+
+.colorSelector p {
+    padding: 12px;
 }
 
 .colorSelector {
@@ -33,18 +41,32 @@ body {
 
 .colorSelector input {
     width: 100%;
+
 }
 
 #tiles {
+    background-color: white;
     width: 500px;
     height: 500px;
-    border: green solid 3px;
+    border: rgb(224, 60, 211) solid 3px;
     display: grid;
     /* THIS WILL BE DEFINED IN JS grid-template-columns: repeat(2, 1fr); */
     grid-gap: 0px;
 }
 
 .tileTeste {
+    background-color: white;
     text-align: center;
     transition:ease-in-out;
 }
+
+footer, header {
+    background-color: rgba(212, 130, 196, 0.233);
+    border-top: black solid 2px;
+    border-bottom: black solid 2px;
+    width: 100%;
+    padding: 12px 0;
+    font-size: larger;
+    text-align: center;
+}
+

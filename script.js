@@ -29,19 +29,21 @@ function paintTile (e) {
 
 function paint(box){
     let brushColor = document.getElementById('brushColor')
-    let newopctValue = 10
-    box.setAttribute('style', `background-color: ${brushColor.value}; opacity: ${newopctValue}%;`)
-    let opctValueArray = box.getAttribute('style').split(" ")
-    let opctValue = opctValueArray[opctValueArray.length - 1]
-    let value =  parseInt(opctValue.slice(0, -2))
     
-    if (value < 100) {
-        value = value + 10
-        console.log(value)
+    if (box.getAttribute('style')){
+        let opctValueArray = box.getAttribute('style').split(" ")
+        let opctValue = opctValueArray[opctValueArray.length - 1]
+        let value =  parseInt(opctValue.slice(0, -2))
+        
+        if (value < 100) {
+            value = value + 10
+            console.log(value)
+            box.setAttribute('style', `background-color: ${brushColor.value}; opacity: ${value}%;`)
+        }
     }
-
-    console.log(value)
-    console.log(typeof(opctValue))
+    else {
+        box.setAttribute('style', `background-color: ${brushColor.value}; opacity: 10%;`)
+    }
 }
 
 function cleanGrid () {
